@@ -44,6 +44,7 @@
                 'Sercicio : '=>$this->servicio,
                 'Corte de Cabello : '=>$this->valor_corte,
             );
+            return $arrayCita;
         }
     }
 ?>
