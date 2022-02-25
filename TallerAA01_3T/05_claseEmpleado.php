@@ -2,7 +2,7 @@
 
     require_once("05_clasePersona.php");
 
-    class Empleado extends Persona{
+    class EMPLEAD0 extends PERSONA{
         
         private $sueldo;
         
@@ -19,6 +19,9 @@
                 'SUELDO : '=>$this->sueldo,
             );
             return $arraySueldo;
+        }
+        public function getSueldo(){
+            return $this->sueldo;
         }
     }
     //

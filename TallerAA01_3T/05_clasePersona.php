@@ -1,6 +1,6 @@
 <?php
 
-    class Persona{
+    class PERSONA{
         public $nombre;
         public $edad;
 
