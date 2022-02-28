@@ -1,7 +1,7 @@
 <?php
 
-    #require_once("02_clase_Empleado.php");
-    require_once("02_clase_Empleado.php");
+    
+    require_once("01_clase_Empleado.php");
     #$objEmployee = new Employee(10045754869, "Juan Camilo Martinez", 23, "Distribuidor", 2100000 )
     $obj_Empleado = new Employee("Carlos Medina",3122546734, "Gerente", 3750000, 0.05 );
 
