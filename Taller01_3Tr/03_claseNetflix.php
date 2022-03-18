@@ -30,10 +30,16 @@ public function getRodaje(){
 
 
 public function setAlquilar($vrAlquilar){
-    $this->Alquilar=$vrAlquilar;
+    
 }
 public function getAlquilar(){
-    return $this->Alquilar;
+    
+    // $this->Alquilar=$vrAlquilar;
+    if($this->Alquilar == 1){
+        return $this->Alquilar = "SI";
+    }else {
+        return $this->Alquilar = "NO";
+    }
 }
 
 public function setDevolucion($vrF_devolucion){
