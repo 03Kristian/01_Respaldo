@@ -4,7 +4,7 @@
     class Conexion{
 
         private $db;
-        private $driver = "mysql";
+        public $driver = "mysql";
         protected $host = "localhost";
         private $based = "adsi_2338368";
         private $usuario = "root";

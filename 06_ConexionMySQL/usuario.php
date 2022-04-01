@@ -4,7 +4,7 @@
     class Usuario extends Conexion{
         public function __construct()
         {
-            $this->db = parent::__construct();
+            $this->db=parent::__construct();
         }
 
         public function insertarUsuario($nombre, $email, $password){
@@ -29,6 +29,22 @@
             }
             return $rows;
         }
-    }
+
+        public function editarUsuario($id, $nombre,$email,$password){
+            $tabla = $this->db->prepare("UPDATE usuario SET nombre = :nombre, email = :email, password = :password WHERE id = $id");
+            $tabla->bindParam(':nombre', $nombre);
+            $tabla->bindParam(':email', $email);
+            $tabla->bindParam(':password', $password);
+            $tabla->execute();
+            return $tabla;
+        }
+
+        public function eliminarUsuario($id){
+            $tabla = $this->db->prepare("DELETE FROM usuario WHERE id = :id");
+            $tabla->bindParam(':id', $id);
+            $tabla->execute();
+            return $tabla;
+        }
+    }//End
 
 ?>
