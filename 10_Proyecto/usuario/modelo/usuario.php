@@ -19,11 +19,34 @@
             if ($tabla->rowCount()==1) {
                 $loginUsuario = $tabla->fetch();
                 $_SESSION['email'] = $loginUsuario['email'];
+                $_SESSION['password'] = $loginUsuario['password'];
+
                 echo "Inicion de Sesion Satisfactorio!! ";
             }else{
                 echo "Fallo al Iniciar Sesion Prro. Verifique sus datos";
             }
         }//End login
+
+        public function validarsesionUsuario(){
+            if ($_SESSION['email']==Null) {
+               header('Location: ../../Index.php');
+            }
+        } 
+
+       public function getnombreUsuario(){
+            return $_SESSION['email'];
+        } 
+
+        public function salirUsuario(){
+            
+            //session_start();
+            unset($_SESSION["email"]);
+            session_destroy();
+            header('refresh:3 url=../../Index.php');
+            //header("refresh:3; url=../");
+            echo "Cerrando Sesion...";
+        
+        }
 
         public function insertarUsuario($nombre,$email,$password){
             //prepare prepra consulta SQL enviada ->isert into

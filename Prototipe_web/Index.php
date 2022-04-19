@@ -9,7 +9,7 @@
             <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"> -->
               <img src="img/logo-e-commerce-digital.png" alt="" width=260px><use xlink:href="#bootstrap"></use></svg>
           </a>
-
+ 
           <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
               <a href="#" class="nav-link text-secondary">

@@ -16,7 +16,7 @@
                 $db = new PDO("{$this->driver}:host={$this->host};
                 dbname={$this->based}", $this->usuario, $this->contraseña);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                echo "La conexion ala Bd es exitosa ";
+                //echo "La conexion ala Bd es exitosa ";
             } catch (PDOException $e) {
                 echo "Error de conexion a la bd. ".$e->getMessage();
             }
